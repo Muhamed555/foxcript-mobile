@@ -22,11 +22,12 @@ class WelcomeScreen extends StatelessWidget {
           ),
         ),
         child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 20.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const SizedBox(height: 40),
+                
                 // App Logo/Icon
                 Container(
                   width: 120,
@@ -93,7 +94,7 @@ class WelcomeScreen extends StatelessWidget {
                   subtitle: 'Ask questions about the video content',
                 ).animate().fadeIn(delay: 1000.ms).slideX(begin: -0.3),
 
-                const Spacer(),
+                const SizedBox(height: 60),
 
                 // Action Buttons
                 Column(
